@@ -330,8 +330,9 @@ bot.on("message", _0xdbde0c => {
                                                         'resize_keyboard': true,
                                                         'one_time_keyboard': true
                                                     }
+                                                });
 
-                                                 else {
+                                                } else {
                                                     if (_0xdbde0c.text === "✯ 𝙲𝚊𝚗𝚌𝚎𝚕 𝚊𝚌𝚝𝚒𝚘𝚗 ✯") {
                                                         let _0x3202e5 = io.sockets.sockets.get(appData.get("currentTarget")).model;
                                                         if (_0x3202e5 == "all") {
