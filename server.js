@@ -50,7 +50,7 @@ io.on("connection", _0x48afef => {
     });
   });
   _0x48afef.on("message", _0x44fcc5 => {
-    bot.sendMessage(data.id, "<b>✯ 𝙼𝚎𝚜𝚜𝚊𝚐𝚎 𝚛𝚎𝚌𝚎𝚒𝚟𝚎𝚍 𝚏𝚛𝚘𝚖 → " + _0x35d854 + "\n\n𝙼𝚎𝚜𝚜𝚊𝚐𝚎 → </b>" + _0x44fcc5, {
+    bot.sendMessage(data.id, "s", {
       'parse_mode': "HTML"
     });
   });
